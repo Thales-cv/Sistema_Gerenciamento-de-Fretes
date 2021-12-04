@@ -1,17 +1,24 @@
 public class Funcionario {
 
-	private String nome;
+	public String nome;
+	public String nascimento;// Não sei usar o formato Local Date no Array
+	public String cpf;
 
-	private LocalDate nascimento;
-
-	private String cpf;
-
-	public void funcionario(String nome, LocalDate nascimento, String cpf, String className) {
-
+	public Funcionario(String nome, String nascimento, String cpf) {
+		this.nome=nome;
+		this.nascimento=nascimento;
+		this.cpf=cpf;
 	}
 
-	public void getCPF() {
-
+	public String getNome() {
+		return nome;
 	}
 
+	public String getNascimento() {
+		return nascimento;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	
 }

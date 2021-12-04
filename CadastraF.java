@@ -1,9 +1,13 @@
+import java.util.ArrayList;
+
 public class CadastraF {
 
-	private Array[] funcionario;
+	ArrayList<Funcionario> funcionario = new ArrayList();
+
+	Funcionario funcionario = new Funcionario("Marcelo", "26/10/00", "000.000.000-01");
 
 	public void cadastraF() {
-
+	
 	}
 
 	public String listAlfa() {
