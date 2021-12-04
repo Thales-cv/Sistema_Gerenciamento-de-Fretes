@@ -1,6 +1,7 @@
 public class CadastroFretes {
 
 	//bomdia
+	//tamojunto
 	private Arraylist fretes;
 
 	private Fretamento[] fretamento;
