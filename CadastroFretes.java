@@ -1,5 +1,6 @@
 public class CadastroFretes {
 
+	//bomdia
 	private Arraylist fretes;
 
 	private Fretamento[] fretamento;
