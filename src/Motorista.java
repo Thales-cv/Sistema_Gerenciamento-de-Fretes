@@ -20,7 +20,7 @@ public class Motorista extends Funcionario {
 		this.cursoCP = cursoCP;
 		this.cursoTP = cursoTP;
 	}
-
+	
 	public String getNumCNH() {
 		return numCNH;
 	}
@@ -40,5 +40,5 @@ public class Motorista extends Funcionario {
 	public boolean isCursoTP() {
 		return cursoTP;
 	}
-
+	
 }
