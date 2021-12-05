@@ -3,11 +3,10 @@ public class CadastroFretes {
 	//bomdia
 	//tamojunto
 	private Arraylist fretes;
-
 	private Fretamento[] fretamento;
 
 	public void cadastrarFrete(Fretamento fretamento) {
-
+		this.fretamento = fretamento;
 	}
 
 	public String listHistorico() {
