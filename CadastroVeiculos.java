@@ -1,7 +1,5 @@
 public class CadastroVeiculos {
 
-	private Arraylist veiculos;
-
 	private Veiculo[] veiculo;
 
 	public void cadastraVeiculos(Veiculo veiculo) {

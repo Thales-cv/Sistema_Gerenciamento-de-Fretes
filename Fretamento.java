@@ -16,7 +16,7 @@ public class Fretamento {
 
 	private double valorCobrado;
 
-	public void fretamento(int id, Veiculo veiculo, int condutor, LocalDate dataTermino, double distanciaPercorrisa) {
+	public void fretamento(int id, Veiculo veiculo, Motorista condutor, LocalDate dataTermino, double distanciaPercorrisa) {
 
 	}
 
