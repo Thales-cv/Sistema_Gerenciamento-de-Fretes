@@ -17,8 +17,8 @@ public class CadastraF {
 
 	public Funcionario buscarCPF(String cpf) {
 		for (int i = 0; i < funcionarios.size(); i++) {
-			if (funcionarios.getCpf() == cpf) {
-				return funcionarios;
+			if (funcionarios.get(i).getCpf() == cpf) {
+				return funcionarios.get(i);
 			}
 		}
 		return null;

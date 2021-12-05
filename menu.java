@@ -1,3 +1,5 @@
+import src.CadastraF;
+
 public class menu {
 
 	private CadastroFretes cadastroFretes;

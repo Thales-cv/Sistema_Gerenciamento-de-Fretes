@@ -1,3 +1,5 @@
+import src.Motorista;
+
 public class Fretamento {
 
 	private int id;
