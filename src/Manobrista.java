@@ -1,7 +1,4 @@
 package src;
-import LocalDate;
-import String;
-
 public class Manobrista extends Funcionario {
 
 	private String numCNH;
@@ -18,6 +15,5 @@ public class Manobrista extends Funcionario {
 		this.categoriaCNH = categoriaCNH;
 		this.dataVenCNH = dataVenCNH;
 	}
-
 	
 }
