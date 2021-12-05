@@ -15,5 +15,19 @@ public class Manobrista extends Funcionario {
 		this.categoriaCNH = categoriaCNH;
 		this.dataVenCNH = dataVenCNH;
 	}
-	
+
+
+
+	public String getNumCNH() {
+		return numCNH;
+	}
+
+	public String getCategoriaCNH() {
+		return categoriaCNH;
+	}
+
+	public int getDataVenCNH() {
+		return dataVenCNH;
+	}
+
 }
