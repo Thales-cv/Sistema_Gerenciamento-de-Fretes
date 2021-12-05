@@ -1,11 +1,11 @@
+import java.util.ArrayList;
+
 public class CadastroVeiculos {
 
-	private Arraylist veiculos;
+	private ArrayList<Veiculo> veiculos;
 
-	private Veiculo[] veiculo;
-
-	public void cadastraVeiculos(Veiculo veiculo) {
-
+	public CadastroVeiculos() {
+		veiculos = new ArrayList<Veiculo>();
 	}
 
 	public String listAno() {
@@ -13,11 +13,20 @@ public class CadastroVeiculos {
 	}
 
 	public Veiculo buscarPlaca(String placa) {
+		for (int i = 0; i < veiculos.size(); i++) {
+			if (veiculos.get(i).getPlaca() == placa) {
+				return veiculos.get(i);
+			}
+		}
 		return null;
 	}
 
 	public String listarVeiculos() {
 		return null;
+	}
+
+	public boolean cadastrarVeiculo(Veiculo veiculo){
+		return veiculos.add(veiculo);
 	}
 
 }

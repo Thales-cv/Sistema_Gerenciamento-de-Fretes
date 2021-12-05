@@ -1,9 +1,11 @@
+import java.util.ArrayList;
+
 public class CadastroFretes {
-	private Arraylist fretes;
-	private Fretamento[] fretamento;
+
+	private ArrayList<Fretamento> fretes;
 
 	public void cadastrarFrete(Fretamento fretamento) {
-		this.fretamento = fretamento;
+		fretes = new ArrayList<Fretamento>();
 	}
 
 	public String listHistorico() {

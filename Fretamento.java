@@ -8,16 +8,21 @@ public class Fretamento {
 
 	private Motorista condutor;
 
-	private LocalDate dataInicio;
+	private String dataInicio;
 
-	private LocalDate dataTermino;
+	private String dataTermino;
 
 	private double distanciaPercorrida;
 
 	private double valorCobrado;
 
-	public void fretamento(int id, Veiculo veiculo, int condutor, LocalDate dataTermino, double distanciaPercorrisa) {
-
+	public void fretamento(int id, Veiculo veiculo, int condutor, String dataInicio, String dataTermino, double distanciaPercorrisa, double valorCobrado) {
+		this.id=id;
+		this.veiculo=veiculo;
+		this.dataInicio = dataInicio;
+		this.dataTermino = dataTermino;
+		this.valorCobrado = valorCobrado;
+		// condutor - distancia percorrida
 	}
 
 }
