@@ -23,5 +23,9 @@ public class Funcionario {
 		return cpf;
 	}
 	
+	public String toString(){
+        String descricao ="Nome: " +  this.nome + "/ Cpf: " + this.cpf + "/ Função: " + getClass()  ;
+        return descricao;
+    }
 	
 }

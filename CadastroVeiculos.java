@@ -22,7 +22,7 @@ public class CadastroVeiculos {
 	}
 
 	public String listarVeiculos() {
-		return null;
+		
 	}
 
 	public boolean cadastrarVeiculo(Veiculo veiculo) {
