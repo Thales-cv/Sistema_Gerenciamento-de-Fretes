@@ -1,18 +1,15 @@
 package src;
+import java.time.LocalDate;
 
 public class Motorista extends Funcionario {
 
 	private String numCNH;
-
 	private String categoriaCNH;
-
-	private String dataVenCNH;
-
+	private LocalDate dataVenCNH;
 	private boolean cursoCP;
-
 	private boolean cursoTP;
 
-	public Motorista(String nome, String nascimento, String cpf, String numCNH, String categoriaCNH, String dataVenCNH, boolean cursoCP, boolean cursoTP) {
+	public Motorista(String nome, String nascimento, String cpf, String numCNH, String categoriaCNH, LocalDate dataVenCNH, boolean cursoCP, boolean cursoTP) {
 		super(nome, nascimento, cpf);
 		this.numCNH = numCNH;
 		this.categoriaCNH = categoriaCNH;
@@ -29,7 +26,7 @@ public class Motorista extends Funcionario {
 		return categoriaCNH;
 	}
 
-	public String getDataVenCNH() {
+	public LocalDate getDataVenCNH() {
 		return dataVenCNH;
 	}
 

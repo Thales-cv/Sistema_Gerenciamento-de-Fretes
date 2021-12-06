@@ -1,22 +1,17 @@
+import java.time.LocalDate;
 import src.*;
 
 public class Fretamento {
 
 	private int id;
-
 	private Veiculo veiculo;
-
 	private Motorista condutor;
-
-	private String dataInicio;
-
-	private String dataTermino;
-
+	private LocalDate dataInicio;
+	private LocalDate dataTermino;
 	private double distanciaPercorrida;
-
 	private double valorCobrado;
 
-	public Fretamento(int id, Veiculo veiculo, Motorista condutor, String dataInicio, String dataTermino, 
+	public Fretamento(int id, Veiculo veiculo, Motorista condutor, LocalDate dataInicio, LocalDate dataTermino, 
 	double distanciaPercorrida, double valorCobrado) {
 		this.id = id;
 		this.veiculo = veiculo;
@@ -24,7 +19,7 @@ public class Fretamento {
 		this.dataTermino = dataTermino;
 		this.valorCobrado = valorCobrado;
 		this.distanciaPercorrida = distanciaPercorrida;
-		this.condutor=condutor;
+		this.condutor = condutor;
 		}
 }
 
