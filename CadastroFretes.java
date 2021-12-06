@@ -4,7 +4,7 @@ public class CadastroFretes {
 
 	private ArrayList<Fretamento> fretes;
 
-	public void cadastrarFrete(Fretamento fretamento) {
+	public void cadastroFrete() {
 		fretes = new ArrayList<Fretamento>();
 	}
 
@@ -24,12 +24,9 @@ public class CadastroFretes {
 		return null;
 	}
 
-	public void cadastroFretes() {
-
+	public boolean cadastrarFretes(Fretamento frete) {
+		return fretes.add(frete);
 	}
 
-	public void novoFretamento() {
-
-	}
 
 }
