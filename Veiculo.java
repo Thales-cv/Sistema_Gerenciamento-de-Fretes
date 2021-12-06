@@ -13,4 +13,19 @@ public class Veiculo {
 		return 0;
 	}
 
+	public String getPlaca() {
+		return placa;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public int getAnoFab() {
+		return anoFab;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
 }
