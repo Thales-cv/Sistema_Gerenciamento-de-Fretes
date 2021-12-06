@@ -1,4 +1,4 @@
-import src.Motorista;
+import src.*;
 
 public class Fretamento {
 
@@ -16,13 +16,16 @@ public class Fretamento {
 
 	private double valorCobrado;
 
-	public void fretamento(int id, Veiculo veiculo, int condutor, String dataInicio, String dataTermino, double distanciaPercorrisa, double valorCobrado) {
-		this.id=id;
-		this.veiculo=veiculo;
+	public Fretamento(int id, Veiculo veiculo, Motorista condutor, String dataInicio, String dataTermino, 
+	double distanciaPercorrida, double valorCobrado) {
+		this.id = id;
+		this.veiculo = veiculo;
 		this.dataInicio = dataInicio;
 		this.dataTermino = dataTermino;
 		this.valorCobrado = valorCobrado;
-		// condutor - distancia percorrida
-	}
-
+		this.distanciaPercorrida = distanciaPercorrida;
+		this.condutor=condutor;
+		}
 }
+
+ 

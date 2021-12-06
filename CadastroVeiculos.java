@@ -25,7 +25,7 @@ public class CadastroVeiculos {
 		return null;
 	}
 
-	public boolean cadastrarVeiculo(Veiculo veiculo){
+	public boolean cadastrarVeiculo(Veiculo veiculo) {
 		return veiculos.add(veiculo);
 	}
 

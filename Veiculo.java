@@ -9,8 +9,10 @@ public class Veiculo {
 	private double peso;
 
 	public Veiculo(String placa, String modelo, int anoFab, int peso, String className) {
-		
-		return 0;
+		this.placa=placa;
+		this.modelo=modelo;
+		this.anoFab=anoFab;
+		this.peso=peso;
 	}
 
 	public String getPlaca() {
