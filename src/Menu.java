@@ -1,69 +1,163 @@
-package src;
-import CadastroFretes;
-import CadastroVeiculos;
 
 public class Menu {
+	private CadastraF = bdfuncionarios;
 
-	private CadastroFretes cadastroFretes;
+	public static void home() {
+		System.out.println(" ");
+		System.out.println(" ");
+		boolean i = true;
+		while (i = true){
+			System.out.println("== MENU PRINCIPAL ==");
+			System.out.println("[1] - GERENCIAR FUNCIONÁRIOS");
+			System.out.println("[2] - GERENCIAR VEÍCULOS");
+			System.out.println("[3] - GERENCIAR FRETES");
+			System.out.println("[0] - SAIR DO PROGRAMA");
+			System.out.println("DIGITE A OPÇÃO DESEJADA: ");
+			Scanner input = new Scanner(System.in);
+			int opcao = input.nextInt();
+		
+			switch(opcao){
+				case 1:
+					menuFuncionarios();
+					break;
+				case 2:
+					menuVeiculos();
+					break;
+				case 3:
+					menuFretes();
+					break;
+				case 0:
+					i = false;
+					break; 
+			}
+	}
+	}
 
-	private CadastraF cadastraF;
-
-	private CadastroVeiculos cadastroVeiculos;
-
-	public void menu() {
-		System.out.println("====== INICIANDO PROGRAMA ========");
-		iniciar();
-
-
-		switch(opcao){
-
-
+	public static boolean menuFuncionarios() {
+		boolean i = true;
+		while (i = true){
+			System.out.println("== GERENCIAR FUNCIONÁRIOS ==");
+			System.out.println("[1] - CADASTRAR FUNCIOARNIO");
+			System.out.println("[2] - LISTAR FUNCIOARNIOS EM ORDEM ALFABÉTICA");
+			System.out.println("[3] - BUSCAR FUINCIOÁRIO POR CPF");
+			System.out.println("[0] - VOLTAR AO MENU ANTERIOR");
+			Scanner input = new Scanner(System.in);
+			int opcao = input.nextInt();
+			switch(opcao){
+				case 1:
+				System.out.println("SELECIONE O TIPOE DE FUNCIOÁRIO: ");
+				System.out.println("[1] - ADMINISTRATIVO");
+				System.out.println("[2] - MANOBRISTA");
+				System.out.println("[3] - MOTORISTA");
+				int tipo = input.nextInt();
+				if (tipo == 1){
+					System.out.println("DIGITE O NOME:");
+					String nome = input.nextString();
+					System.out.println("DIGITE A DATA DE NASCIMENTO: ");
+					String dataNascimento = input.nextString(); // local date
+					System.out.println("DIGITE O CPF ");
+					String cpf = input.nextString();
+					bdfuncionarios.cadastarFuncionario(new Administrativo(nome, dataNascimento, cpf));
+				} else if(tipo == 2){
+					System.out.println("DIGITE O NOME:");
+					String nome = input.nextString();
+					System.out.println("DIGITE A DATA DE NASCIMENTO: ");
+					String dataNascimento = input.nextString(); // local date
+					System.out.println("DIGITE O CPF ");
+					String cpf = input.nextString();
+					System.out.println("NÚMERO DA CNH: ");
+					String cnh = input.nextString();
+					System.out.println("CATEGORIA DA CNH: ");
+					String categoriaCNH = input.nextString();
+					System.out.println("DATA DE VENCIMENTO DA CNH: ");
+					String validadeCNH = input.nextString();
+					bdfuncionarios.cadastarFuncionario(new Manobrista(nome, dataNascimento, cpf, cnh, categoriaCNH, validadeCNH));
+				} else if (tipo == 3)
+					System.out.println("DIGITE O NOME:");
+					String nome = input.nextString();
+					System.out.println("DIGITE A DATA DE NASCIMENTO: ");
+					String dataNascimento = input.nextString(); // local date
+					System.out.println("DIGITE O CPF ");
+					String cpf = input.nextString();
+					bdfuncionarios.cadastarFuncionario(new Administrativo(nome, dataNascimento, cpf));
+					break;
+				case 2:
+					// LISTAR FUNCIOARNIOS EM ORDEM ALFABÉTICA
+					break;
+				case 3:
+					// BUSCAR FUINCIOÁRIO POR CPF
+					break;
+				case 0:
+					// RETORNAR
+					i = false;
+					break;
+				default:
+				System.out.println("ERRO: TENTE NOVAMENTE");
+			}
 		}
 	}
 
-	public void iniciar(){
-		// CRIANDO BANCOS
-		CadastraF bdfuncionarios = new CadastraF(1); // CADASTRANDO BANCO DE FUNCIOARNIOS
-		CadastroFretes bdfretes = new CadastroFretes(1); // CADASTRANDO BANCO DE FRETES
-		CadastroVeiculos bdveiculos = new CadastroVeiculos(1); // CADASTRANDO BANCO DE VEICULOS
-		
-		// CADASTRANDO FUNCIONÁRIOS:
-		// ==== MANOBISTRAS
-		bdfuncionarios.cadastarFuncionario(new Manobrista("Marcelo", "26/10/00", "000.000.000-01", "0138548", "B", 10));
-		bdfuncionarios.cadastarFuncionario(new Manobrista("João", "26/10/00", "000.000.000-01", "0138548", "B", 10));
-		bdfuncionarios.cadastarFuncionario(new Manobrista("Pedro", "26/10/00", "000.000.000-01", "0138548", "B", 10));
-		bdfuncionarios.cadastarFuncionario(new Manobrista("Vicente", "26/10/00", "000.000.000-01", "0138548", "B", 10));
-		// ==== MOTORISTAS
-		bdfuncionarios.cadastarFuncionario(new Motorista("Mateus", "12/02/1975", "026.000.000-01", "7856644", "A", "25/12/2025", true, false));
-		bdfuncionarios.cadastarFuncionario(new Motorista("Mateus", "12/02/1975", "026.000.000-01", "7856644", "A", "25/12/2025", true, false));
-		bdfuncionarios.cadastarFuncionario(new Motorista("Mateus", "12/02/1975", "026.000.000-01", "7856644", "A", "25/12/2025", true, false));
-		bdfuncionarios.cadastarFuncionario(new Motorista("Mateus", "12/02/1975", "026.000.000-01", "7856644", "A", "25/12/2025", true, false));
-		// ==== ADMINISTRATIVO
-		bdfuncionarios.cadastarFuncionario(new Administrativo("Thales", "24/03/1997", "026.122.420-40"));
-		bdfuncionarios.cadastarFuncionario(new Administrativo("Thales", "24/03/1997", "026.122.420-40"));
-		bdfuncionarios.cadastarFuncionario(new Administrativo("Thales", "24/03/1997", "026.122.420-40"));
-		bdfuncionarios.cadastarFuncionario(new Administrativo("Thales", "24/03/1997", "026.122.420-40"));
-		// --------------------------------------------------------------------------------------------------------------------------------
-		// CADASTRANDO VEÍCULOS
-		// ==== PASSEIO E UTILITÁRIOS
-		bdveiculos.cadastroVeiculos(new PasseioUtilitario());
-		// ==== TRANSPORTE DE CARGA
-		bdveiculos.cadastroVeiculos(new TransporteCarga());
-		// ==== PASSAGEIROS
-		bdveiculos.cadastroVeiculos(new Passageiros());
-		// ---------------------------------------------------------------------------------------------------------------------------------
-		// CADASTRANDO FRETES
-		// ==== ONIBUS VAN
-		bdfretes.cadastrarFrete(new onibusVan());
-		// ==== UTILITÁRIOS CAMINHÃO
-		bdfretes.cadastrarFrete(new UtilitariosCaminhao());
-
-		Manobrista novo = new Manobrista("Thales", "24/03/1997", "000.000.002-01", "12345678910", "B", 10);
-		cf.cadastarFuncionario(novo);
-		
-		
+	public static boolean menuVeiculos() {
+		boolean i = true;
+		while (i = true){
+			System.out.println("== GERENCIAR VEÍCULOS ==");
+			System.out.println("[1] - CADASTRAR VEÍCULO");
+			System.out.println("[2] - LISTAR VEÍCULOS EM ORDEM DE FABRICAÇÃO");
+			System.out.println("[3] - BUSCAR VEÍCULOS POR PLACA");
+			System.out.println("[0] - VOLTAR AO MENU ANTERIOR");
+			Scanner input = new Scanner(System.in);
+			int opcao = input.nextInt();
+			switch(opcao){
+				case 1:
+					// CADASTRAR VEÍCULOS
+					break;
+				case 2:
+					// LISTAR VEÍCULOS
+					break;
+				case 3:
+					// BUSCAR VEÍCULOS
+					break;
+				case 0:
+					// RETORNAR
+					i = false;
+					break;
+				default:
+				System.out.println("ERRO: TENTE NOVAMENTE");
+			}
+		}
 	}
 
-
+	public static boolean menuFretes() {
+		boolean i = true;
+			while (i = true){
+			System.out.println("== GERENCIAR FRETES ==");
+			System.out.println("[1] - CADASTRAR FRETAMENTO DE VEÍCULO");
+			System.out.println("[2] - LISTAR MOTORISTAS LIVRES");
+			System.out.println("[3] - LISTAR VEÍCULOS LIVRES");
+			System.out.println("[4] - LISTAR TOP 5 MAIS LUCRATIVOS");
+			System.out.println("[0] - VOLTAR AO MENU ANTERIOR");
+			Scanner input = new Scanner(System.in);
+			int opcao = input.nextInt();
+			switch(opcao){
+				case 1:
+					// CADASTRAR FRETAMENTO DE VEÍCULO
+					break;
+				case 2:
+					// LISTAR MOTORISTAS LIVRES
+					break;
+				case 3:
+					// LISTAR TOP 5 MAIS LUCRATIVOS
+					break;
+				case 4:
+					// 	LISTAR TOP 5 MAIS LUCRATIVOS
+				case 0:
+					// RETORNAR
+					i = false;
+					break;
+				default:
+				System.out.println("ERRO: TENTE NOVAMENTE");
+			}
+		}
+	}
 
 }
